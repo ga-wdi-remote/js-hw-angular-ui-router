@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Quote Me</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <!-- new router script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <script src="js/router.js"></script>
+    <script src="js/quotesController.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" media="screen" title="no title">
+  </head>
+  <body>
+
+    <nav>
+      <ul>
+        <li ui-sref="quotes">Quotes</li>
+        <li ui-sref="second">2nd Api</li>
+        <li href="#">hi</li>
+      </ul>
+    </nav>
+
+{{2+2}}
+    <ui-view>
+    </ui-view>
+
+
+  </body>
+</html>
