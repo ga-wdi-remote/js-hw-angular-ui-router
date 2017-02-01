@@ -4,7 +4,9 @@ var Schema = mongoose.Schema;
 mongoose.Promise = global.Promise;
 
 var QuoteSchema = new Schema({
-  name: String
+  name: String,
+  created_at: Date,
+  updated_at: Date
 });
 
 QuoteSchema.pre('save', function(next){

@@ -15,9 +15,9 @@ function appRouter($stateProvider, $urlRouterProvider){
     templateUrl: '/partials/quotes.html',
     controller: 'QuotesController as quotes'
   })
-  // .state('second', {
-  //   url: '/second',
-  //   templateUrl: '/partials/second.html',
-  //   controller: 'secondController as second'
-  // });
+  .state('netflix', {
+    url: '/netflix',
+    templateUrl: '/partials/netflix.html',
+    controller: 'NetflixController as netflix'
+  });
 }
