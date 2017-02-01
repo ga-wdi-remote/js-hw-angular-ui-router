@@ -10,6 +10,7 @@ function QuotesController($http, $state){
   quotes.generateQuote = generateQuote;
   quotes.quote = "";
   quotes.saveQuote = saveQuote;
+  quotes.editQuote = editQuote;
   quotes.getSavedQuote = getSavedQuote;
   quotes.deleteQuote = deleteQuote;
   quotes.myQuotes = [];
@@ -39,6 +40,15 @@ function QuotesController($http, $state){
     $http
       .post('/quotes', {quote: quote} )
       .then(function(response) {
+        console.log(response);
+      });
+  }
+
+  function editQuote(quoteID, index){
+
+    $http
+      .put('/quotes/'+ quoteID, {data: quotes.myQuotes[index]})
+      .then(function(response){
         console.log(response);
       });
   }

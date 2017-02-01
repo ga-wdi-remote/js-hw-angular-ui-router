@@ -1,18 +1,33 @@
-<h1>QUOTE OF THE DAY</h1>
-
-<button ng-click="quotes.generateQuote()">Get Swansonized</button>
+<section id="quotes">
 
 
-<ul>
-  <li>{{quotes.quote}}</li>
-</ul>
+  <h1>RON SWANSON QUOTE OF THE DAY</h1>
 
-<button ng-if="quotes.quote" ng-click="quotes.saveQuote(quotes.quote)">Save Me!</button>
+  <button ng-click="quotes.generateQuote()">Get Swansonized</button>
 
 
-<h3 ng-click="quotes.getSavedQuote()">See All my saved quotes</h3>
+  <ul>
+    <li>{{quotes.quote}}</li>
+  </ul>
 
-<ul>
-  <li ng-repeat="quote in quotes.myQuotes" ng-click="quotes.deleteQuote(quote._id)">{{quote.name}}</li>
+  <button ng-if="quotes.quote" ng-click="quotes.saveQuote(quotes.quote)">Save Me!</button>
 
-</ul>
+
+  <h3 ng-click="quotes.getSavedQuote()">See All my saved quotes</h3>
+
+  <ul>
+    <li ng-repeat="quote in quotes.myQuotes track by $index" >{{quote.name}}
+
+				<form ng-submit="quotes.editQuote(quote._id, $index)">
+          <span>EDIT QUOTE: </span>
+          <input type='text' ng-model="quote.name" placeholder='The new quote..'>
+          <button>Edit</button>
+        </form>
+
+      <p ng-click="quotes.deleteQuote(quote._id)">Delete Quote</p>
+
+    </li>
+
+  </ul>
+
+</section>

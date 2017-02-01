@@ -6,10 +6,6 @@ function appRouter($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-  .state('index', {
-    url: '/',
-    templateUrl: '/partials/index.html'
-  })
   .state('quotes', {
     url: '/quotes',
     templateUrl: '/partials/quotes.html',
@@ -19,5 +15,9 @@ function appRouter($stateProvider, $urlRouterProvider){
     url: '/netflix',
     templateUrl: '/partials/netflix.html',
     controller: 'NetflixController as netflix'
+  })
+  .state('home', {
+    url: '/',
+    templateUrl: '/partials/home.html',
   });
 }
