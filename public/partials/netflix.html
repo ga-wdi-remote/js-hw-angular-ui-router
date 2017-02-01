@@ -3,11 +3,10 @@
 <h1>NETFLIX</h1>
 
 <form>
-  <input ng-model="netflix.movie">
-  <button ng-click="netflix.getCharacter(netflix.movie)" name="button">What movie should I watch?</button>
+  <input ng-model="netflix.movie" placeholder="movie title">
+  <button ng-click="netflix.getCharacter(netflix.movie)" name="button">Gimme the Poster!</button>
 </form>
 
-{{netflix.movie}}
+<img ng-if="netflix.poster" src="{{netflix.poster}}"/>
 
-{{netflix.character}}
 </section>

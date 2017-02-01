@@ -11,14 +11,13 @@ function NetflixController($http, $state){
   netflix.getCharacter = getCharacter;
   netflix.movie = "";
 
-
-
+  //retrieve poster image for searched movie
   function getCharacter(movieName){
     console.log("WHAT IS THIS:", movieName);
     $http
       .get('http://netflixroulette.net/api/api.php?title=' + movieName).then(function(response){
-        console.log(response);
+        console.log(response.data.poster);
+        netflix.poster = response.data.poster;
       });
   }
-
 }
