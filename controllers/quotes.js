@@ -5,7 +5,7 @@ var Quote = require('../models/quote.js');
 //grab all saves quotes
 router.get('/', function(req, res) {
   Quote.find({}).exec(function(err, quotes){
-    if (err) { console.log(quotes); }
+    if (err) { console.log(err); }
     console.log("FOUND THE QUOTES!", quotes);
     res.json({ quotes });
   });
