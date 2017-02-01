@@ -25,7 +25,7 @@ router.post('/', function(req, res) {
 });
 
 
-//delete a quote
+//delete a movie
 router.delete('/:id', function(req, res) {
   var id = req.params.id;
 

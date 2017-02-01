@@ -74,12 +74,3 @@ function NetflixController($http, $state){
   }
 
 }
-
-  // //save quote to local database
-  // function saveQuote(quote){
-  //   $http
-  //     .post('/quotes', {quote: quote} )
-  //     .then(function(response) {
-  //       console.log(response);
-  //     });
-  // }
