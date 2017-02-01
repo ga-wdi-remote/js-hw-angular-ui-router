@@ -7,8 +7,7 @@ NetflixController.$inject = ['$http'];
 
 function NetflixController($http, $state){
   var netflix = this;
-  netflix.character = "";
-  netflix.getCharacter = getCharacter;
+  netflix.getMovie = getMovie;
   netflix.movie = "";
   netflix.saveMovie = saveMovie;
   netflix.getSavedMovies = getSavedMovies;
@@ -16,7 +15,7 @@ function NetflixController($http, $state){
   netflix.myMovies = [];
 
   //retrieve poster image for searched movie
-  function getCharacter(movieName){
+  function getMovie(movieName){
     console.log("WHAT IS THIS:", movieName);
 
     $http

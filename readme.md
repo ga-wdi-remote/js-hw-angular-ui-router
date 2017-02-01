@@ -25,7 +25,7 @@ In this weekend assignment, you'll have a chance to work with a Single Page App 
 |  **Front-end Scripts** |  `public/js/router.js` |  Set up your ui-router here. |
 |  |  `public/js/quotesController.js` |  Set up your Angular controller here for the quotes state |   
 |  |  `public/js/netflixController.js`|  Set up your ui-router here. |   
-|    **Front-end Views**|  `index.html` |  This is where you will Angularify your app. All views will render within `<ui-view></ui-view>` |
+|    **Front-end Views**|  `index.html` |  This is where you will bootstrap Angular to the app. All views will render within `<ui-view></ui-view>` |
 |  |  `partials/home.html`|  This is your home page view. |  
 |  |  `partials/quotes.html`|  This is your Quotes view. |   
 |  |  `partials/netflix.html`|  This is your Netflix page view. |    
@@ -57,7 +57,19 @@ In this weekend assignment, you'll have a chance to work with a Single Page App 
 
 ### State 3: Netflix Movie Poster
 
+- Clicking on the `Netflix` tab will render the Quotes partial.
+- Clicking on the `Gimme the Poster!` button will make an `$http` call to http://netflixroulette.net/. Check out [their API docs](http://netflixroulette.net/api/) to see how to query for a movie using a movie title.
+- When a response returns, show the movie title + poster image in the page underneath the search bar. Each time you query, a new response will render.
+- Once a poster is generated, a button `Save Me!` will also render on the page.
+- Clicking on the `Save Me!` button will save the movie title and movie poster url to your local database. (Check out the netflix Schema)
+- Clicking on the `<h3>See All my saved movies</h3>` will show a list of all our saved Netflix movies.
+- Each movie will also have a `<p>Delete Movie</p>`. When clicked, the quote is removed from the local database and removed from the page.
 - :dart: Commit often!
+
+### Reach Goals
+
+- Add a 4th state with a 3rd party API of your choice!
+
 ## Submitting Your Work
 
   When you're ready to submit your work,
