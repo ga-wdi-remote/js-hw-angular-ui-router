@@ -16,4 +16,11 @@ app.use(express.static('public'));
 var quotesController = require('./controllers/quotes.js');
 app.use('/quotes', quotesController);
 
-app.listen(3000);
+var netflixController = require('./controllers/netflix.js');
+app.use('/netflix', netflixController);
+
+
+
+app.listen(3000, function(){
+  console.log('listening on port 3000')
+});

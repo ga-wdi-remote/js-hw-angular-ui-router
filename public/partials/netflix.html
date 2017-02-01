@@ -7,6 +7,21 @@
   <button ng-click="netflix.getCharacter(netflix.movie)" name="button">Gimme the Poster!</button>
 </form>
 
-<img ng-if="netflix.poster" src="{{netflix.poster}}"/>
+<h2>{{netflix.title}}</h2>
+<img ng-if="netflix.poster" src="{{netflix.poster}}"/></br>
+<button ng-if="netflix.poster" ng-click="netflix.saveMovie(netflix.poster, netflix.title)">Save Me!</button>
+
+<h3 ng-click="netflix.getSavedMovies()">See All my saved movies</h3>
+
+  <ul>
+    <div ng-repeat="movie in netflix.myMovies track by $index" >
+        <h2>{{movie.title}}</h2>
+        <img ng-if="movie.poster" src="{{movie.poster}}">
+
+      <p ng-click="netflix.deleteMovie(movie._id)">Delete Movie</p>
+
+    </div>
+
+  </ul>
 
 </section>
